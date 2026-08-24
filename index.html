@@ -191,7 +191,7 @@
 
   /* footer */
   footer{background:var(--navy);padding:64px 0 32px}
-  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:48px}
   .foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:24px}
   .foot-brand img{height:48px;width:48px;border-radius:50%;background:#fff;padding:3px}
   .foot-brand .fb{font-family:'Playfair Display';font-weight:700;color:#fff;font-size:1.1rem;line-height:1.1}
@@ -201,6 +201,12 @@
   .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
   .foot-col ul a{font-size:.9rem;color:hsl(0 0% 100% / .7);transition:.2s}
   .foot-col ul a:hover{color:#fff}
+  .foot-contact{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .foot-contact li{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:hsl(0 0% 100% / .7)}
+  .foot-contact li svg{flex-shrink:0;margin-top:3px;color:var(--gold)}
+  .foot-contact a{color:hsl(0 0% 100% / .7);transition:.2s}
+  .foot-contact a:hover{color:#fff}
+  .foot-contact .lbl{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:hsl(0 0% 100% / .45);margin-bottom:1px}
   .foot-bottom{border-top:1px solid hsl(0 0% 100% / .2);padding-top:28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
   .foot-bottom p:first-child{font-size:.88rem;color:hsl(0 0% 100% / .6)}
   .foot-bottom p:last-child{font-size:.74rem;color:hsl(0 0% 100% / .5);max-width:520px;text-align:right}
@@ -375,7 +381,7 @@
         <form id="ownerForm" onsubmit="handleOwnerSubmit(event)">
           <div class="field"><label>Park Name</label><input name="parkName" required placeholder="Sunset Mobile Home Community"></div>
           <div class="field"><label>Contact Person</label><input name="contactPerson" required placeholder="Full name"></div>
-          <div class="field"><label>Phone Number</label><input type="tel" name="phone" required placeholder="(555) 123-4567"></div>
+          <div class="field"><label>Phone Number</label><input type="tel" name="phone" required placeholder="(317) 555-0100"></div>
           <div class="field"><label>Email Address</label><input type="email" name="email" required placeholder="you@example.com"></div>
           <div class="field"><label>Anything else? (optional)</label><textarea name="message" rows="3" placeholder="Number of lots, location, or anything you'd like us to know..."></textarea></div>
           <button type="submit" class="btn btn-outline" style="width:100%;border-color:var(--red);color:var(--red)">Contact Us About My Park</button>
@@ -395,7 +401,7 @@
             <div class="field"><label>Last Name</label><input name="lastName" required placeholder="Smith"></div>
           </div>
           <div class="field"><label>Email Address</label><input type="email" name="email" required placeholder="john@example.com"></div>
-          <div class="field"><label>Phone Number</label><input type="tel" name="phone" placeholder="(555) 123-4567"></div>
+          <div class="field"><label>Phone Number</label><input type="tel" name="phone" placeholder="(317) 555-0100"></div>
           <div class="field"><label>Investment Range</label>
             <select name="investmentRange">
               <option value="">Select range</option>
@@ -448,6 +454,11 @@
       <div class="foot-col"><h4>Legal</h4><ul>
         <li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li>
         <li><a href="#">Disclosures</a></li></ul></div>
+      <div class="foot-col"><h4>Get In Touch</h4><ul class="foot-contact">
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+13174267355">(317) 426-7355</a></li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span><span class="lbl">Park Owners</span><a href="mailto:sell@patriotmobilehomeparks.com">sell@patriotmobilehomeparks.com</a></span></li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span><span class="lbl">Investors</span><a href="mailto:invest@patriotmobilehomeparks.com">invest@patriotmobilehomeparks.com</a></span></li>
+      </ul></div>
     </div>
     <div class="foot-bottom">
       <p>&copy; <span id="yr"></span> Patriot Mobile Home Parks. All rights reserved.</p>
