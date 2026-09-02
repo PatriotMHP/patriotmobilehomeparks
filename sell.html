@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXR500JM4Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZXR500JM4Q');
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sell Your Park — Patriot Mobile Home Parks</title>
@@ -380,7 +389,7 @@
     if(btn){btn.disabled=true;btn.textContent='Sending...';}
     fetch(endpoint,{method:'POST',body:data,headers:{'Accept':'application/json'}})
       .then(function(r){
-        if(r.ok){form.reset();showToast(successToastId);}
+        if(r.ok){form.reset();showToast(successToastId);if(typeof gtag==='function'){gtag('event','generate_lead',{form_type:(successToastId==='ownerToast'?'sell':'invest')});}}
         else{showToast('errToast');}
       })
       .catch(function(){showToast('errToast');})
